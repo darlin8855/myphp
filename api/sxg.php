@@ -4,7 +4,7 @@ $channel = empty($_GET['id']) ? "emdy4k_8000" : trim($_GET['id']);
 $array = explode("_", $channel);
 if (isset
 ($array[1])) {
-    $stream = "http://60.255.59.180:9090/live/8ne5i_sccn,{$array[0]}_hls_pull_{$array[1]}K/";
+    $stream = "http://60.255.241.170:20010/live/8ne5i_sccn,{$array[0]}_hls_pull_{$array[1]}K/";
 } else {
     $stream = 
 "http://60.255.241.170:20010/live/8ne5i_sccn,{$array[0]}_hls_pull_4000K/";
