@@ -2,8 +2,7 @@
 date_default_timezone_set("Asia/Shanghai");
 $channel = empty($_GET['id']) ? "cctv16hd4k/15000000" : trim($_GET['id']);
 $array = explode("/", $channel);
-$stream = "http://180.97.247.27:8088/liveplay-kk.rtxapp.com/live/program/live/{$array[0]}/{$array[1]}/";
-//$stream = "http://122d6f6388173cbc5240f6d0036bc5b7.v.smtcdns.net/sitv.mobilev51.live.bestvcdn.com.cn/001/live/program/live/{$array[0]}/{$array[1]}/";
+$stream = "http://58.42.59.55/hljbuv52.live.bestvcdn.com.cn/liveplay-kk.rtxapp.com/live/program/live/{$array[0]}/{$array[1]}/";
 $timestamp = substr(time(), 0, 9) - 7;
 $current = "#EXTM3U" . "\r\n";
 $current .= "#EXT-X-VERSION:3" . "\r\n";
@@ -16,6 +15,5 @@ for ($i = 0; $i < 3; $i++) {
     $current .= $stream . $timefirst . "/" . $timestamp . ".ts" . "\r\n";
     $timestamp = $timestamp + 1;
 }
-header("Content-Disposition: attachment; filename=mnf.m3u8");
+header("Content-Disposition: attachment; filename=playlist.m3u8");
 echo $current;
-?>
